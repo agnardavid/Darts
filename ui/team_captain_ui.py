@@ -28,7 +28,7 @@ class TeamCaptainUI(UserUI):
             option_list.append(f"{current_opt}. {competition.name}")
             current_opt += 1
         lower_boundary = 0
-        upper_boundary = 10
+        upper_boundary = 12
         self.ui_logic.print_ui(self.get_list_boundary(option_list), 
                                GlobalConst.MENU_OPTIONS_BMNP, 
                                GlobalConst.HEADER_LIST_ALL_COMP)
@@ -169,7 +169,7 @@ class TeamCaptainUI(UserUI):
             current_opt += 1
 
         lower_boundary = 0
-        upper_boundary = 10
+        upper_boundary = 12
         self.ui_logic.print_ui(option_list,
                                GlobalConst.MENU_OPTIONS_BMNP,
                                TeamCaptainConst.HEADER_COMP_CAPTAIN_MATCHES.format(competition_name))

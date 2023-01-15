@@ -261,7 +261,7 @@ class OrganizerUI(UserUI):
                                                                    competition.name))
             current_opt += 1
         lower_boundary = 0
-        upper_boundary = 10
+        upper_boundary = 12
         self.ui_logic.print_ui(self.get_list_boundary(option_list), 
                                GlobalConst.MENU_OPTIONS_BMNP, 
                                GlobalConst.HEADER_LIST_ALL_COMP)
@@ -461,7 +461,7 @@ class OrganizerUI(UserUI):
             current_opt += 1
 
         lower_boundary = 0
-        upper_boundary = 10
+        upper_boundary = 12
         self.ui_logic.print_ui(option_list,
                                GlobalConst.MENU_OPTIONS_BMNP,
                                UserUIConst.HEADER_COMP_FINISHED.format(competition_name))
@@ -560,7 +560,7 @@ class OrganizerUI(UserUI):
             current_opt += 1
 
         lower_boundary = 0
-        upper_boundary = 10
+        upper_boundary = 12
         self.ui_logic.print_ui(option_list,
                                GlobalConst.MENU_OPTIONS_BMNP,
                                UserUIConst.HEADER_COMP_UNFINISHED.format(competition_name))
@@ -1085,7 +1085,7 @@ class OrganizerUI(UserUI):
             current_opt += 1
         option_list.append(OrganizerConst.SELECTIOM_ADD_NEW_TEAM.format(current_opt))
         lower_boundary = 0
-        upper_boundary = 10
+        upper_boundary = 12
         
         error = False
         self.ui_logic.print_ui(self.get_list_boundary(option_list), 
@@ -1189,7 +1189,7 @@ class OrganizerUI(UserUI):
             current_opt += 1
         option_list.append(OrganizerConst.SELECTIOM_ADD_NEW_CLUB.format(current_opt))
         lower_boundary = 0
-        upper_boundary = 10
+        upper_boundary = 12
         
         
         

@@ -27,7 +27,7 @@ class UserUI():
             option_list.append(f"{current_opt}. {competition.name}")
             current_opt += 1
         lower_boundary = 0
-        upper_boundary = 10
+        upper_boundary = 12
         self.ui_logic.print_ui(self.get_list_boundary(option_list), 
                                GlobalConst.MENU_OPTIONS_BMNP, 
                                GlobalConst.HEADER_LIST_ALL_COMP)
@@ -124,7 +124,7 @@ class UserUI():
             option_list.append(DisplayConst.MENU_TEAM_LIST.format(current_opt, team.name, team.club))
             current_opt += 1
         lower_boundary = 0
-        upper_boundary = 10
+        upper_boundary = 12
         self.ui_logic.print_ui(self.get_list_boundary(option_list), 
                                GlobalConst.MENU_OPTIONS_BMNP, 
                                UserUIConst.HEADER_COMP_SELECTED.format(comp_name[:self.UI_MAX_LEN]),
@@ -176,7 +176,7 @@ class UserUI():
             option_list.append(DisplayConst.MENU_PLAYER_LIST.format(player.name, player.social_id, player.gsm_number))
         # We will allow switching pages if in later updates a team is allowed to have more than 4 players
         lower_boundary = 0
-        upper_boundary = 10
+        upper_boundary = 12
         self.ui_logic.print_ui(self.get_list_boundary(option_list), 
                                GlobalConst.MENU_OPTIONS_BMNP,
                                team_name[:self.UI_MAX_LEN],
@@ -227,7 +227,7 @@ class UserUI():
                                                                            match.away_team))
             current_opt += 1
         lower_boundary = 0
-        upper_boundary = 10
+        upper_boundary = 12
         self.ui_logic.print_ui(option_list,
                                GlobalConst.MENU_OPTIONS_BMNP,
                                UserUIConst.HEADER_COMP_UNFINISHED.format(comp_name[:self.UI_MAX_LEN]),
@@ -281,7 +281,7 @@ class UserUI():
                                                                          match.away_team))
             current_opt += 1
         lower_boundary = 0
-        upper_boundary = 10
+        upper_boundary = 12
         self.ui_logic.print_ui(option_list,
                                GlobalConst.MENU_OPTIONS_BMNP,
                                UserUIConst.HEADER_COMP_FINISHED.format(comp_name[:self.UI_MAX_LEN]),
@@ -336,7 +336,7 @@ class UserUI():
                                                                             team["won legs"]))
             standing += 1
         lower_boundary = 0
-        upper_boundary = 10
+        upper_boundary = 12
         self.ui_logic.print_ui(option_list,
                                GlobalConst.MENU_OPTIONS_BMNP, 
                                UserUIConst.HEADER_COMP_STANDING.format(competition_name[:self.UI_MAX_LEN]),
@@ -427,7 +427,7 @@ class UserUI():
         """
         error = False
         if user_input == GlobalConst.USER_SELECT_N:
-            if lower_boundary + 10 >= len(option_list):
+            if lower_boundary + 12 >= len(option_list):
                 error = True
                 self.ui_logic.print_ui(self.get_list_boundary(option_list, 
                                        lower_boundary,
@@ -438,8 +438,8 @@ class UserUI():
                                        body_header)
                 print(bcolors.FAIL + GlobalConst.INVALID_INPUT + bcolors.ENDC)
             else:
-                lower_boundary += 10
-                upper_boundary += 10
+                lower_boundary += 12
+                upper_boundary += 12
                 self.ui_logic.print_ui(self.get_list_boundary(option_list, 
                                        lower_boundary,
                                        upper_boundary),
@@ -448,7 +448,7 @@ class UserUI():
                                        align,
                                        body_header)
         elif user_input == GlobalConst.USER_SELECT_P:
-            if lower_boundary - 10 < 0:
+            if lower_boundary - 12 < 0:
                 error = True
                 self.ui_logic.print_ui(self.get_list_boundary(option_list, 
                                        lower_boundary,
@@ -459,8 +459,8 @@ class UserUI():
                                        body_header)
                 print(bcolors.FAIL + GlobalConst.INVALID_INPUT + bcolors.ENDC)
             else:
-                lower_boundary -= 10
-                upper_boundary -= 10
+                lower_boundary -= 12
+                upper_boundary -= 12
                 self.ui_logic.print_ui(self.get_list_boundary(option_list, 
                                        lower_boundary,
                                        upper_boundary),
